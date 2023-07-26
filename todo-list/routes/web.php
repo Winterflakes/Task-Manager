@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 use App\Http\Controllers\TaskController;
+
+Route::get('/tasks/{id}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
+
 
 Route::get('/', [TaskController::class, 'index'])->name('tasks.index');
 Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
