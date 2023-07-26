@@ -5,6 +5,9 @@
     <title>Edit Task</title>
 </head>
 <body>
+@extends('layouts.app')
+
+@section('content')
     <h1>Edit Task</h1>
     <form action="{{ route('tasks.update', $task->id) }}" method="POST">
         @csrf
@@ -18,5 +21,6 @@
         <button type="submit">Save</button>
     </form>
     <a href="{{ route('tasks.show', $task->id) }}">Cancel</a>
+    @endsection
 </body>
 </html>

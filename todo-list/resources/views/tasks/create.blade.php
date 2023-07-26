@@ -5,6 +5,10 @@
     <title>Add New Task</title>
 </head>
 <body>
+    
+@extends('layouts.app')
+
+@section('content')
     <h1>Add New Task</h1>
     <form action="{{ route('tasks.store') }}" method="POST">
         @csrf
@@ -17,5 +21,6 @@
         <button type="submit">Save</button>
     </form>
     <a href="{{ route('tasks.index') }}">Cancel</a>
+    @endsection
 </body>
 </html>

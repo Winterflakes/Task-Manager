@@ -5,6 +5,10 @@
     <title>To-Do List</title>
 </head>
 <body>
+    
+@extends('layouts.app')
+
+@section('content')
     <h1>To-Do List</h1>
     <ul>
         @foreach ($tasks as $task)
@@ -19,5 +23,6 @@
         @endforeach
     </ul>
     <a href="{{ route('tasks.create') }}">Add New Task</a>
+    @endsection
 </body>
 </html>
